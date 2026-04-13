@@ -3,15 +3,14 @@ import pickle
 import numpy as np
 from pydantic import BaseModel
 
-# Load model
+
 with open("model.pkl", "rb") as f:
     model = pickle.load(f)
 
 app = FastAPI()
 
-# Input schema
 class WineFeatures(BaseModel):
-    features: list  # list of feature values
+    features: list  
 
 @app.get("/")
 def home():
