@@ -4,7 +4,7 @@ from sklearn.linear_model import LinearRegression
 import pickle
 
 
-df = pd.read_csv("winequality-red.csv")
+df = pd.read_csv("winequality-red.csv", sep=';')
 
 X = df.drop("quality", axis=1)
 y = df["quality"]
